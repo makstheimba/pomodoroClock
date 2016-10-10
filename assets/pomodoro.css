@@ -1,0 +1,7 @@
+.blockWrap, .sessionWrap{
+    display: inline;
+    border: 1px dashed black;
+}
+#session {
+    font-size: 20px;
+}

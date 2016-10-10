@@ -7,24 +7,20 @@
         <script type="text/javascript" src="assets/pomodoro.js"></script>
     </head>
     <body>
-        <label for = "break">Break</label>
-        <button id = "breakMinus">-</button>
-        <input type = "text" id = "break" value="2">
-        <button id = "breakPlus">+</button>
-        
-        <br>
-        <br>
-        
-        <label for = "session">Session</label>
-        <button id = "sessionMinus">-</button>
-        <input type = "text" id = "session" value="5">
-        <button id = "sessionPlus">+</button>
-        
-        <br>
-        <br>
-        
-        <div id = "clock">
-            
+        <div class = "breakWrap">
+            <label for = "break">Break</label><br>
+            <button id = "breakMinus">-</button>
+            <input type = "text" id = "break" value="2" readonly="true">
+            <button id = "breakPlus">+</button>
+        </div>
+        <div class = "sessionWrap">
+            <label for = "session">Session</label>
+            <br>
+            <button id = "sessionMinus">-</button>
+            <input type = "text" id = "session" value="5" readonly="true">
+            <button id = "sessionPlus">+</button>        
+        </div>
+        <div id = "clock">            
         </div>
     </body>
 </html>
