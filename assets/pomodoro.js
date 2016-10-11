@@ -5,6 +5,7 @@ function clickClock(action) {
             counter = setInterval(timer, interval);
         $("#clock").off("click").click(pauseClock(counter, action));// Change click event so it pauses the timer
         disableControls();
+        animateProgress("#clock");
         console.log("inside clickClock", count);
         function timer() {
             count -= interval;
@@ -19,6 +20,7 @@ function clickClock(action) {
         }
     }
 }
+
 function pauseClock(counter, action) {
     return function () {
         clearInterval(counter);
@@ -39,8 +41,7 @@ function changeValue(sign, id){
             $(id).val(currentValue + 1);
         else if (currentValue !== 1)
             $(id).val(currentValue - 1);
-        if (id === "#session")
-            changeClock();
+        changeClock();
     }
 }
 function enableControls() {
