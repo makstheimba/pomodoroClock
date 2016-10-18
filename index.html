@@ -3,25 +3,33 @@
     <head>
         <title>Pomodoro Clock</title>
         <link rel = "stylesheet" href = "assets/pomodoro.css">
+        <script src="https://use.fontawesome.com/b0d6fa1c9f.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
         <script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>        
         <script type="text/javascript" src="assets/pomodoro.js"></script>
     </head>
     <body>
-        <div class = "breakWrap">
-            <label for = "break">Break</label><br>
-            <button id = "breakMinus">-</button>
-            <input type = "text" id = "break" value="2" readonly="true">
-            <button id = "breakPlus">+</button>
+        <div class = "restWrap">
+            <label for = "rest">Break</label>
+            <br>
+            <button id = "restMinus">-</button>
+            <input type = "text" id = "rest" value="05:00" readonly="true">
+            <button id = "restPlus">+</button>
         </div>
         <div class = "sessionWrap">
             <label for = "session">Session</label>
             <br>
             <button id = "sessionMinus">-</button>
-            <input type = "text" id = "session" value="5" readonly="true">
+            <input type = "text" id = "session" value="25:00" readonly="true">
             <button id = "sessionPlus">+</button>        
         </div>
         <br>
-        <div id = "clock">            
+        <div class = "clockWrap">
+            <div class = "clockScreen workSession">
+                <span id = "runningInterval">Break</span>
+                <br>
+                <span id = "clock">25:00</span>                
+            </div>
         </div>
     </body>
 </html>
