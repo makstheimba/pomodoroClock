@@ -5,31 +5,34 @@
         <link rel = "stylesheet" href = "assets/pomodoro.css">
         <script src="https://use.fontawesome.com/b0d6fa1c9f.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
-        <script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>        
+        <script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
         <script type="text/javascript" src="assets/pomodoro.js"></script>
     </head>
     <body>
-        <div class = "restWrap">
-            <label for = "rest">Break</label>
-            <br>
-            <button id = "restMinus">-</button>
-            <input type = "text" id = "rest" value="05:00" readonly="true">
-            <button id = "restPlus">+</button>
-        </div>
-        <div class = "sessionWrap">
-            <label for = "session">Session</label>
-            <br>
-            <button id = "sessionMinus">-</button>
-            <input type = "text" id = "session" value="25:00" readonly="true">
-            <button id = "sessionPlus">+</button>        
+        <h1>Pomodoro Clock</h1>
+        <div class = "settingsScreen">
+            <div class = "options">
+                Break
+                <br>
+                <span id = "restLength">5 minutes</span>
+                <div id = "restSlider" class = "mySlider"></div>
+                WORK
+                <br>
+                <span id = "sessionLength">25 minutes</span>
+                <div id = "sessionSlider" class = "mySlider"></div>
+            </div>
+            <button id = "btnSettingsHide" class = "fa fa-check  butt"></button>
         </div>
         <br>
         <div class = "clockWrap">
-            <div class = "clockScreen workSession">
-                <span id = "runningInterval">Break</span>
+            <div class = "clockScreen workSession" id = "clockDisplay">
+                <span id = "runningLabel">WORK</span>
                 <br>
                 <span id = "clock">25:00</span>                
-            </div>
+            </div>            
         </div>
+        <button class = "butt" id = "btnSettingsShow"><i class = "fa fa-cog fa-2x fa-spin-hover"></i></button>
     </body>
 </html>
